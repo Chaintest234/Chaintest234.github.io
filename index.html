@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CryptoZombies front-end</title>
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="web3.min.js"></script>
+    <script language="javascript" type="text/javascript" src="cbgameplay_abi.js"></script>
+  </head>
+  <body>
+
+    <script>
+      // 2. Start code here
+      var cyrptoBladesGP;
+
+      function startApp() {
+        var cryptoBladesGPAddress = "0x39Bea96e13453Ed52A734B6ACEeD4c41F57B2271";
+        cyrptoBladesGP = new web3js.eth.Contract(cbgameplayABI, cryptoBladesGPAddress);
+      }
+
+      window.addEventListener('load', function() {
+
+        web3js = new Web3(web3.currentProvider);
+        // Checking if Web3 has been injected by the browser (Mist/MetaMask)
+        if (typeof web3 !== 'undefined') {
+          // Use Mist/MetaMask's provider
+          alert("in");
+          web3js = new Web3(web3.currentProvider);
+        } else {
+          alert("no provss");
+          // Handle the case where the user doesn't have Metamask installed
+          // Probably show them a message prompting them to install Metamask
+        }
+
+        // Now you can start your app & access web3 freely:
+        startApp()
+
+      })
+    </script>
+  </body>
+</html>
