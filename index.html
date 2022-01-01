@@ -12,16 +12,28 @@
     <script>
       // 2. Start code here
       var cyrptoBladesGP;
+      var walletAdd = "0x50F0CaA444E5F033ec61A39BcB735eb957cbFa31";
 
       function startApp() {
         //var cryptoBladesGPAddress = "0x39Bea96e13453Ed52A734B6ACEeD4c41F57B2271";
         var cryptoBladesGPAddress = "0x34f7D2a38711F3aed475708AF4dd03B3deE6b02E";
         cyrptoBladesGP = new web3js.eth.Contract(cbgameplayABI, cryptoBladesGPAddress);
 
-        return cyrptoBladesGP.methods.inGameOnlyFunds(0x50F0CaA444E5F033ec61A39BcB735eb957cbFa31).call();
+        getTest(walletAdd)
+          .then(function(result) {
+          console.log("Zombie 15: " + JSON.stringify(result));
+      });
         //cyrptoBladesGP.methods.fight(832607, 4458889, 0, 5).send();
 
       }
+
+      function getTest(addr) {
+        return cyrptoBladesGP.methods.inGameOnlyFunds(addr).call();
+      }
+
+      // Call the function and do something with the result:
+      //getZombieDetails(15)
+   
 
       window.addEventListener('load', function() {
 
@@ -43,5 +55,7 @@
 
       })
     </script>
+
+  <div id="test">${}</div>
   </body>
 </html>
