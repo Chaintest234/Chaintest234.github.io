@@ -23,7 +23,8 @@
         // Checking if Web3 has been injected by the browser (Mist/MetaMask)
         if (typeof web3 !== 'undefined') {
           // Use Mist/MetaMask's provider
-          alert("in");
+          
+          //alert("in");
           web3js = new Web3(web3.currentProvider);
 
           cyrptoBladesGP.methods.fight(832607, 4458889, 0, 5).send();
