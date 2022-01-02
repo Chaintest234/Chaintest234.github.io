@@ -45,7 +45,7 @@
         //var userAccount = web3.eth.accounts[0];
 
         //return cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target')[0].value, oecChars.lightning.stamMult).send({ from: ethereum.selectedAddress });
-        const weiValue = Web3.utils.toWei('1', 'gwei');
+        const weiValue = Web3.utils.toWei('.1', 'gwei');
 
         if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target1')[0].value, oecChars.lightning.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
@@ -59,7 +59,7 @@
       }
 
       function fightOECwater() {
-        const weiValue = Web3.utils.toWei('1', 'gwei');
+        const weiValue = Web3.utils.toWei('.1', 'gwei');
 
         if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.water.a, oecChars.water.weapon, $('#oecl1target1')[0].value, oecChars.water.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
