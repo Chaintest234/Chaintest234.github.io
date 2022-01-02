@@ -64,4 +64,13 @@ var nodes = {
     avax: 'https://api.avax.network/ext/bc/C/rpc'
 }
 
-var oecChars
+var oecChars = {
+    lightning: {
+        a: '16092',
+        b: '16091',
+        c: '16105',
+        d: '16106',
+        weapon: '8768',
+        stamMult: '5',
+    },    
+}
