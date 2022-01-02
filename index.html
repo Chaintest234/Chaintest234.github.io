@@ -14,8 +14,8 @@
 
     <script>
 
-      import { CLIENT_EVENTS } from "@walletconnect/client";
-      import { PairingTypes, SessioTypes } from "@walletconnect/types";
+      //import { CLIENT_EVENTS } from "@walletconnect/client";
+      //import { PairingTypes, SessioTypes } from "@walletconnect/types";
 
       var cyrptoBladesGP;
       var walletAdd = "0x50F0CaA444E5F033ec61A39BcB735eb957cbFa31";
@@ -101,6 +101,32 @@
           { from: ethereum.selectedAddress, gasPrice: weiValue });
       };      
 
+      function fightBSClight() {
+        const weiValue = Web3.utils.toWei('.1', 'gwei');
+
+        if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.lightning2.a, bscChars.lightning2.weapon, $('#oecl1target1')[0].value, bscChars.lightning2.stamMult).send(
+          { from: ethereum.selectedAddress, gasPrice: weiValue });
+        if ($('#oecl1target2')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.lightning2.b, bscChars.lightning2.weapon, $('#oecl1target2')[0].value, bscChars.lightning2.stamMult).send(
+          { from: ethereum.selectedAddress, gasPrice: weiValue });
+        if ($('#oecl1target3')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.lightning2.c, bscChars.lightning2.weapon, $('#oecl1target3')[0].value, bscChars.lightning2.stamMult).send(
+          { from: ethereum.selectedAddress, gasPrice: weiValue });
+        if ($('#oecl1target4')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.lightning2.d, bscChars.lightning2.weapon, $('#oecl1target4')[0].value, bscChars.lightning2.stamMult).send(
+          { from: ethereum.selectedAddress, gasPrice: weiValue });
+      }; 
+
+      function fightBSCearth() {
+        const weiValue = Web3.utils.toWei('.1', 'gwei');
+
+        if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.earth2.a, bscChars.earth2.weapon, $('#oecl1target1')[0].value, bscChars.earth2.stamMult).send(
+          { from: ethereum.selectedAddress, gasPrice: weiValue });
+        if ($('#oecl1target2')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.earth2.b, bscChars.earth2.weapon, $('#oecl1target2')[0].value, bscChars.earth2.stamMult).send(
+          { from: ethereum.selectedAddress, gasPrice: weiValue });
+        if ($('#oecl1target3')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.earth2.c, bscChars.earth2.weapon, $('#oecl1target3')[0].value, bscChars.earth2.stamMult).send(
+          { from: ethereum.selectedAddress, gasPrice: weiValue });
+        if ($('#oecl1target4')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.earth2.d, bscChars.earth2.weapon, $('#oecl1target4')[0].value, bscChars.earth2.stamMult).send(
+          { from: ethereum.selectedAddress, gasPrice: weiValue });
+      }; 
+
       function fight(char, weap, target){
 
 
@@ -130,15 +156,23 @@
     </script>
 
   <div id="test">
+    <button type="button" onclick="connect()">Connect</button>
     <input type="text" id="oecl1target1">
     <input type="text" id="oecl1target2">
     <input type="text" id="oecl1target3">
     <input type="text" id="oecl1target4">
+  </div>
+  <div>
     <button type="button" onclick="fightOEClight()">OEC-L</button>
     <button type="button" onclick="fightOECearth()">OEC-E</button>
     <button type="button" onclick="fightOECfire()">OEC-F</button>
     <button type="button" onclick="fightOECwater()">OEC-W</button>
-    <button type="button" onclick="connect()">Connect</button>
   </div>
+  <div>
+    <button type="button" onclick="fightBSClight()">BSC-L2</button>
+    <button type="button" onclick="fightBSCearth()">BSC-E2</button>
+    <button type="button" onclick="fightBSCfire()">BSC-F2</button>
+    <button type="button" onclick="fightBSCwater()">BSC-W2</button>
+  </div>  
   </body>
 </html>
