@@ -44,11 +44,16 @@
 
         //var userAccount = web3.eth.accounts[0];
 
-        return cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target')[0].value, oecChars.lightning.stamMult).send({ from: ethereum.selectedAddress });
+        //return cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target')[0].value, oecChars.lightning.stamMult).send({ from: ethereum.selectedAddress });
+        cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target1')[0].value, oecChars.lightning.stamMult).send({ from: ethereum.selectedAddress });
+        cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target2')[0].value, oecChars.lightning.stamMult).send({ from: ethereum.selectedAddress });
+        cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target3')[0].value, oecChars.lightning.stamMult).send({ from: ethereum.selectedAddress });
+        cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target4')[0].value, oecChars.lightning.stamMult).send({ from: ethereum.selectedAddress });
       };
-      // function getTest(addr) {
-      //   return cyrptoBladesGP.methods.inGameOnlyFunds(addr).call();
-      // }
+
+      function fightOECearth(){
+        return cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target')[0].value, oecChars.lightning.stamMult).send({ from: ethereum.selectedAddress });
+      }
 
       function fight(char, weap, target){
 
@@ -79,8 +84,12 @@
     </script>
 
   <div id="test">
-    <input type="text" id="oecl1target">
-    <button type="button" onclick="fightOEClight()">OEC</button>
+    <input type="text" id="oecl1target1">
+    <input type="text" id="oecl1target2">
+    <input type="text" id="oecl1target3">
+    <input type="text" id="oecl1target4">
+    <button type="button" onclick="fightOEClight()">OEC-L</button>
+    <button type="button" onclick="fightOECearth()">OEC-E</button>
     <button type="button" onclick="connect()">Connect</button>
   </div>
   </body>
