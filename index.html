@@ -12,7 +12,6 @@
   <body>
 
     <script>
-      // 2. Start code here
       var cyrptoBladesGP;
       var walletAdd = "0x50F0CaA444E5F033ec61A39BcB735eb957cbFa31";
 
@@ -32,8 +31,12 @@
       }
 
       function fightOEClight() {
-        alert('fight');
-        return cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target')[0].value, oecChars.lightning.stamMult).send({ from: accounts[0] });
+        //alert('fight');
+        const accounts = await ethereum.request({ method: 'eth_accounts' })
+          .then(function(result){
+            return cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target')[0].value, oecChars.lightning.stamMult).send({ from: result[0] });
+          });
+        //return cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target')[0].value, oecChars.lightning.stamMult).send({ from: accounts[0] });
       }
       // function getTest(addr) {
       //   return cyrptoBladesGP.methods.inGameOnlyFunds(addr).call();
@@ -54,11 +57,9 @@
         if (typeof web3 !== 'undefined') {
           // Use Mist/MetaMask's provider
           
-          //alert("in");
           web3js = new Web3(web3.currentProvider.enable());
 
         } else {
-          alert("no provss");
           // Handle the case where the user doesn't have Metamask installed
           // Probably show them a message prompting them to install Metamask
         }
