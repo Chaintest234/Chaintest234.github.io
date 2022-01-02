@@ -31,6 +31,10 @@
 
       };
 
+      function connect(){
+        ethereum.request({ method: 'eth_requestAccounts' });
+      }
+
       function fightOEClight() {
         //alert('fight');
         // const accounts = ethereum.request({ method: 'eth_accounts' })
@@ -77,6 +81,7 @@
   <div id="test">
     <input type="text" id="oecl1target">
     <button type="button" onclick="fightOEClight()">OEC</button>
+    <button type="button" onclick="connect()">Connect</button>
   </div>
   </body>
 </html>
