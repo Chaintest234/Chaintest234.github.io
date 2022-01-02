@@ -54,7 +54,7 @@ var conAddress = {
         skillPair: '0xF52B3Df311182F43202806ee0E72aCB92d777879',
         tokenPair: '0xe28984e1ee8d431346d32bec9ec800efb643eef4'
     }
-}
+};
 
 var nodes = {
     bsc: 'https://bsc-dataseed1.defibit.io/',
@@ -62,7 +62,7 @@ var nodes = {
     oec: 'https://exchainrpc.okex.org',
     poly: 'https://polygon-rpc.com/',
     avax: 'https://api.avax.network/ext/bc/C/rpc'
-}
+};
 
 var oecChars = {
     lightning: {
@@ -73,4 +73,4 @@ var oecChars = {
         weapon: '8768',
         stamMult: '5',
     },    
-}
+};
