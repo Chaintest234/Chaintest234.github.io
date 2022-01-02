@@ -33,7 +33,7 @@
 
       function fightOEClight() {
         alert('fight');
-        return cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target')[0].value, oecChars.lightning.stamMult).send();
+        return cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target')[0].value, oecChars.lightning.stamMult).send({ from: accounts[0] });
       }
       // function getTest(addr) {
       //   return cyrptoBladesGP.methods.inGameOnlyFunds(addr).call();
