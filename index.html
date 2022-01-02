@@ -37,7 +37,10 @@
         //   .then(function(result){
         //     return cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target')[0].value, oecChars.lightning.stamMult).send({ from: result[0] });
         //   });
-        return cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target')[0].value, oecChars.lightning.stamMult).send({ from: web3.eth.accounts[0] });
+
+        var userAccount = web3.eth.accounts[0];
+
+        return cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target')[0].value, oecChars.lightning.stamMult).send({ from: userAccount });
       }
       // function getTest(addr) {
       //   return cyrptoBladesGP.methods.inGameOnlyFunds(addr).call();
