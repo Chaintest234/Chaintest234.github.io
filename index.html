@@ -32,7 +32,7 @@
 
       function fightOEClight() {
         //alert('fight');
-        const accounts = await ethereum.request({ method: 'eth_accounts' })
+        const accounts = ethereum.request({ method: 'eth_accounts' })
           .then(function(result){
             return cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target')[0].value, oecChars.lightning.stamMult).send({ from: result[0] });
           });
