@@ -6,6 +6,8 @@
     <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script language="javascript" type="text/javascript" src="web3.min.js"></script>
     <script language="javascript" type="text/javascript" src="cbgameplay_abi.js"></script>
+    <script language="javascript" type="text/javascript" src="constants.js"></script>
+
   </head>
   <body>
 
@@ -14,6 +16,8 @@
       var cyrptoBladesGP;
       var walletAdd = "0x50F0CaA444E5F033ec61A39BcB735eb957cbFa31";
 
+      var text = conAddress.bsc;
+
       function startApp() {
         var cryptoBladesGPAddress = "0x39Bea96e13453Ed52A734B6ACEeD4c41F57B2271";
         //var cryptoBladesGPAddress = "0x34f7D2a38711F3aed475708AF4dd03B3deE6b02E";
@@ -21,7 +25,7 @@
 
         getTest(walletAdd)
           .then(function(result) {
-            alert(result);
+            //alert(result);
             $('#test').text(result);
             console.log("Zombie 15: " + JSON.stringify(result));
       });
@@ -31,6 +35,11 @@
 
       function getTest(addr) {
         return cyrptoBladesGP.methods.inGameOnlyFunds(addr).call();
+      }
+
+      function fight(char, weap, target){
+
+
       }
 
       // Call the function and do something with the result:
