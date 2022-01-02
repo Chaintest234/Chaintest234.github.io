@@ -64,6 +64,17 @@ var nodes = {
     avax: 'https://api.avax.network/ext/bc/C/rpc'
 };
 
+var bscChars = {
+    water1: {
+        a: '16092',
+        b: '16091',
+        c: '16105',
+        d: '16106',
+        weapon: '8768',
+        stamMult: '5',
+    },    
+};
+
 var oecChars = {
     lightning: {
         a: '16092',
@@ -72,5 +83,23 @@ var oecChars = {
         d: '16106',
         weapon: '8768',
         stamMult: '5',
-    },    
+    },
+
+    earth: {
+        a: '10457',
+        b: '10452',
+        c: '12788',
+        d: '13547',
+        weapon: '27396',
+        stamMult: '5',
+    },  
+    
+    water: {
+        a: '16981',
+        b: '17038',
+        c: '17039',
+        d: '17040',
+        weapon: '28346',
+        stamMult: '5',
+    }
 };

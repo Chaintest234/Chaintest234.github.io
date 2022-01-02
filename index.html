@@ -58,6 +58,19 @@
         return cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target')[0].value, oecChars.lightning.stamMult).send({ from: ethereum.selectedAddress });
       }
 
+      function fightOECwater() {
+        const weiValue = Web3.utils.toWei('1', 'gwei');
+
+        if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.water.a, oecChars.water.weapon, $('#oecl1target1')[0].value, oecChars.water.stamMult).send(
+          { from: ethereum.selectedAddress, gasPrice: weiValue });
+        if ($('#oecl1target2')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.water.b, oecChars.water.weapon, $('#oecl1target2')[0].value, oecChars.water.stamMult).send(
+          { from: ethereum.selectedAddress, gasPrice: weiValue });
+        if ($('#oecl1target3')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.water.c, oecChars.water.weapon, $('#oecl1target3')[0].value, oecChars.water.stamMult).send(
+          { from: ethereum.selectedAddress, gasPrice: weiValue });
+        if ($('#oecl1target4')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.water.d, oecChars.water.weapon, $('#oecl1target4')[0].value, oecChars.water.stamMult).send(
+          { from: ethereum.selectedAddress, gasPrice: weiValue });
+      };      
+
       function fight(char, weap, target){
 
 
@@ -93,6 +106,7 @@
     <input type="text" id="oecl1target4">
     <button type="button" onclick="fightOEClight()">OEC-L</button>
     <button type="button" onclick="fightOECearth()">OEC-E</button>
+    <button type="button" onclick="fightOECwater()">OEC-W</button>
     <button type="button" onclick="connect()">Connect</button>
   </div>
   </body>
