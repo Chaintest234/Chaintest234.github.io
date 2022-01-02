@@ -55,7 +55,7 @@
           // Use Mist/MetaMask's provider
           
           //alert("in");
-          web3js = new Web3(web3.currentProvider);
+          web3js = new Web3(web3.currentProvider.enable());
 
         } else {
           alert("no provss");
@@ -66,7 +66,7 @@
         // Now you can start your app & access web3 freely:
         startApp();
 
-      })
+      };)
     </script>
 
   <div id="test">
