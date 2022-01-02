@@ -21,19 +21,24 @@
         //var cryptoBladesGPAddress = "0x34f7D2a38711F3aed475708AF4dd03B3deE6b02E";
         cyrptoBladesGP = new web3js.eth.Contract(cbgameplayABI, conAddress.bsc.cryptoBlades);
 
-        getTest(walletAdd)
-          .then(function(result) {
-            //alert(result);
-            //$('#test').text(result);
-            console.log("Zombie 15: " + JSON.stringify(result));
+        // getTest(walletAdd)
+        //   .then(function(result) {
+        //     //alert(result);
+        //     //$('#test').text(result);
+        //     console.log("Zombie 15: " + JSON.stringify(result));
+
       });
         //cyrptoBladesGP.methods.fight(832607, 4458889, 0, 5).send();
 
       }
 
-      function getTest(addr) {
-        return cyrptoBladesGP.methods.inGameOnlyFunds(addr).call();
+      function fightOEClight() {
+        alert('fight');
+        return cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('oecl1target').text).send();
       }
+      // function getTest(addr) {
+      //   return cyrptoBladesGP.methods.inGameOnlyFunds(addr).call();
+      // }
 
       function fight(char, weap, target){
 
@@ -66,7 +71,8 @@
     </script>
 
   <div id="test">
-    <input type="text" id="target">
+    <input type="text" id="oecl1target">
+    <button type="button" onclick="fightOEClight()">OEC</button>
   </div>
   </body>
 </html>
