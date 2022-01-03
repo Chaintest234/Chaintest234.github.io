@@ -19,6 +19,7 @@
 
       var cyrptoBladesGP;
       var walletAdd = "0x50F0CaA444E5F033ec61A39BcB735eb957cbFa31";
+      var Adress;
 
       function startApp() {
         //var cryptoBladesGPAddress = "0x39Bea96e13453Ed52A734B6ACEeD4c41F57B2271";
@@ -31,7 +32,7 @@
       /** OEC chars **/
 
       function connect(){
-        var Adress = ethereum.request({ method: 'eth_requestAccounts' });
+        Adress = ethereum.request({ method: 'eth_requestAccounts' });
       }
 
       function fightOEClight() {
