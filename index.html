@@ -24,7 +24,9 @@
       function startApp() {
         //var cryptoBladesGPAddress = "0x39Bea96e13453Ed52A734B6ACEeD4c41F57B2271";
         //var cryptoBladesGPAddress = "0x34f7D2a38711F3aed475708AF4dd03B3deE6b02E";
-        cyrptoBladesGP = new web3js.eth.Contract(cbgameplayABI, conAddress.oec.cryptoBlades);
+        cyrptoBladesGPoec = new web3js.eth.Contract(cbgameplayABI, conAddress.oec.cryptoBlades);
+        cyrptoBladesGPbsc = new web3js.eth.Contract(cbgameplayABI, conAddress.bsc.cryptoBlades);
+        cyrptoBladesGPheco = new web3js.eth.Contract(cbgameplayABI, conAddress.heco.cryptoBlades);
 
       };
 
@@ -49,52 +51,52 @@
         //return cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target')[0].value, oecChars.lightning.stamMult).send({ from: ethereum.selectedAddress });
         const weiValue = Web3.utils.toWei('.1', 'gwei');
 
-        if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target1')[0].value, oecChars.lightning.stamMult).send(
+        if ($('#oecl1target1')[0].value != '') cyrptoBladesGPoec.methods.fight(oecChars.lightning.a, oecChars.lightning.weapon, $('#oecl1target1')[0].value, oecChars.lightning.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target2')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.lightning.b, oecChars.lightning.weapon, $('#oecl1target2')[0].value, oecChars.lightning.stamMult).send(
+        if ($('#oecl1target2')[0].value != '') cyrptoBladesGPoec.methods.fight(oecChars.lightning.b, oecChars.lightning.weapon, $('#oecl1target2')[0].value, oecChars.lightning.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target3')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.lightning.c, oecChars.lightning.weapon, $('#oecl1target3')[0].value, oecChars.lightning.stamMult).send(
+        if ($('#oecl1target3')[0].value != '') cyrptoBladesGPoec.methods.fight(oecChars.lightning.c, oecChars.lightning.weapon, $('#oecl1target3')[0].value, oecChars.lightning.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target4')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.lightning.d, oecChars.lightning.weapon, $('#oecl1target4')[0].value, oecChars.lightning.stamMult).send(
+        if ($('#oecl1target4')[0].value != '') cyrptoBladesGPoec.methods.fight(oecChars.lightning.d, oecChars.lightning.weapon, $('#oecl1target4')[0].value, oecChars.lightning.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
      };
 
       function fightOECearth(){
         const weiValue = Web3.utils.toWei('.1', 'gwei');
 
-        if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.earth.a, oecChars.earth.weapon, $('#oecl1target1')[0].value, oecChars.earth.stamMult).send(
+        if ($('#oecl1target1')[0].value != '') cyrptoBladesGPoec.methods.fight(oecChars.earth.a, oecChars.earth.weapon, $('#oecl1target1')[0].value, oecChars.earth.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target2')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.earth.b, oecChars.earth.weapon, $('#oecl1target2')[0].value, oecChars.earth.stamMult).send(
+        if ($('#oecl1target2')[0].value != '') cyrptoBladesGPoec.methods.fight(oecChars.earth.b, oecChars.earth.weapon, $('#oecl1target2')[0].value, oecChars.earth.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target3')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.earth.c, oecChars.earth.weapon, $('#oecl1target3')[0].value, oecChars.earth.stamMult).send(
+        if ($('#oecl1target3')[0].value != '') cyrptoBladesGPoec.methods.fight(oecChars.earth.c, oecChars.earth.weapon, $('#oecl1target3')[0].value, oecChars.earth.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target4')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.earth.d, oecChars.earth.weapon, $('#oecl1target4')[0].value, oecChars.earth.stamMult).send(
+        if ($('#oecl1target4')[0].value != '') cyrptoBladesGPoec.methods.fight(oecChars.earth.d, oecChars.earth.weapon, $('#oecl1target4')[0].value, oecChars.earth.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
       }
 
       function fightOECfire() {
         const weiValue = Web3.utils.toWei('.1', 'gwei');
 
-        if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.fire.a, oecChars.fire.weapon, $('#oecl1target1')[0].value, oecChars.fire.stamMult).send(
+        if ($('#oecl1target1')[0].value != '') cyrptoBladesGPoec.methods.fight(oecChars.fire.a, oecChars.fire.weapon, $('#oecl1target1')[0].value, oecChars.fire.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target2')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.fire.b, oecChars.fire.weapon, $('#oecl1target2')[0].value, oecChars.fire.stamMult).send(
+        if ($('#oecl1target2')[0].value != '') cyrptoBladesGPoec.methods.fight(oecChars.fire.b, oecChars.fire.weapon, $('#oecl1target2')[0].value, oecChars.fire.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target3')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.fire.c, oecChars.fire.weapon, $('#oecl1target3')[0].value, oecChars.fire.stamMult).send(
+        if ($('#oecl1target3')[0].value != '') cyrptoBladesGPoec.methods.fight(oecChars.fire.c, oecChars.fire.weapon, $('#oecl1target3')[0].value, oecChars.fire.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target4')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.fire.d, oecChars.fire.weapon, $('#oecl1target4')[0].value, oecChars.fire.stamMult).send(
+        if ($('#oecl1target4')[0].value != '') cyrptoBladesGPoec.methods.fight(oecChars.fire.d, oecChars.fire.weapon, $('#oecl1target4')[0].value, oecChars.fire.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
       };      
 
       function fightOECwater() {
         const weiValue = Web3.utils.toWei('.1', 'gwei');
 
-        if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.water.a, oecChars.water.weapon, $('#oecl1target1')[0].value, oecChars.water.stamMult).send(
+        if ($('#oecl1target1')[0].value != '') cyrptoBladesGPoec.methods.fight(oecChars.water.a, oecChars.water.weapon, $('#oecl1target1')[0].value, oecChars.water.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target2')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.water.b, oecChars.water.weapon, $('#oecl1target2')[0].value, oecChars.water.stamMult).send(
+        if ($('#oecl1target2')[0].value != '') cyrptoBladesGPoec.methods.fight(oecChars.water.b, oecChars.water.weapon, $('#oecl1target2')[0].value, oecChars.water.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target3')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.water.c, oecChars.water.weapon, $('#oecl1target3')[0].value, oecChars.water.stamMult).send(
+        if ($('#oecl1target3')[0].value != '') cyrptoBladesGPoec.methods.fight(oecChars.water.c, oecChars.water.weapon, $('#oecl1target3')[0].value, oecChars.water.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target4')[0].value != '') cyrptoBladesGP.methods.fight(oecChars.water.d, oecChars.water.weapon, $('#oecl1target4')[0].value, oecChars.water.stamMult).send(
+        if ($('#oecl1target4')[0].value != '') cyrptoBladesGPoec.methods.fight(oecChars.water.d, oecChars.water.weapon, $('#oecl1target4')[0].value, oecChars.water.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
       };      
 
@@ -103,52 +105,52 @@
       function fightBSClight() {
         const weiValue = Web3.utils.toWei('5', 'gwei');
 
-        if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.lightning2.a, bscChars.lightning2.weapon, $('#oecl1target1')[0].value, bscChars.lightning2.stamMult).send(
+        if ($('#oecl1target1')[0].value != '') cyrptoBladesGPbsc.methods.fight(bscChars.lightning2.a, bscChars.lightning2.weapon, $('#oecl1target1')[0].value, bscChars.lightning2.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target2')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.lightning2.b, bscChars.lightning2.weapon, $('#oecl1target2')[0].value, bscChars.lightning2.stamMult).send(
+        if ($('#oecl1target2')[0].value != '') cyrptoBladesGPbsc.methods.fight(bscChars.lightning2.b, bscChars.lightning2.weapon, $('#oecl1target2')[0].value, bscChars.lightning2.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target3')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.lightning2.c, bscChars.lightning2.weapon, $('#oecl1target3')[0].value, bscChars.lightning2.stamMult).send(
+        if ($('#oecl1target3')[0].value != '') cyrptoBladesGPbsc.methods.fight(bscChars.lightning2.c, bscChars.lightning2.weapon, $('#oecl1target3')[0].value, bscChars.lightning2.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target4')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.lightning2.d, bscChars.lightning2.weapon, $('#oecl1target4')[0].value, bscChars.lightning2.stamMult).send(
+        if ($('#oecl1target4')[0].value != '') cyrptoBladesGPbsc.methods.fight(bscChars.lightning2.d, bscChars.lightning2.weapon, $('#oecl1target4')[0].value, bscChars.lightning2.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
       }; 
 
       function fightBSCearth() {
         const weiValue = Web3.utils.toWei('5', 'gwei');
 
-        if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.earth2.a, bscChars.earth2.weapon, $('#oecl1target1')[0].value, bscChars.earth2.stamMult).send(
+        if ($('#oecl1target1')[0].value != '') cyrptoBladesGPbsc.methods.fight(bscChars.earth2.a, bscChars.earth2.weapon, $('#oecl1target1')[0].value, bscChars.earth2.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target2')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.earth2.b, bscChars.earth2.weapon, $('#oecl1target2')[0].value, bscChars.earth2.stamMult).send(
+        if ($('#oecl1target2')[0].value != '') cyrptoBladesGPbsc.methods.fight(bscChars.earth2.b, bscChars.earth2.weapon, $('#oecl1target2')[0].value, bscChars.earth2.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target3')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.earth2.c, bscChars.earth2.weapon, $('#oecl1target3')[0].value, bscChars.earth2.stamMult).send(
+        if ($('#oecl1target3')[0].value != '') cyrptoBladesGPbsc.methods.fight(bscChars.earth2.c, bscChars.earth2.weapon, $('#oecl1target3')[0].value, bscChars.earth2.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target4')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.earth2.d, bscChars.earth2.weapon, $('#oecl1target4')[0].value, bscChars.earth2.stamMult).send(
+        if ($('#oecl1target4')[0].value != '') cyrptoBladesGPbsc.methods.fight(bscChars.earth2.d, bscChars.earth2.weapon, $('#oecl1target4')[0].value, bscChars.earth2.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
       }; 
 
       function fightBSCfire() {
         const weiValue = Web3.utils.toWei('5', 'gwei');
 
-        if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.fire2.a, bscChars.fire2.weapon, $('#oecl1target1')[0].value, bscChars.fire2.stamMult).send(
+        if ($('#oecl1target1')[0].value != '') cyrptoBladesGPbsc.methods.fight(bscChars.fire2.a, bscChars.fire2.weapon, $('#oecl1target1')[0].value, bscChars.fire2.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target2')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.fire2.b, bscChars.fire2.weapon, $('#oecl1target2')[0].value, bscChars.fire2.stamMult).send(
+        if ($('#oecl1target2')[0].value != '') cyrptoBladesGPbsc.methods.fight(bscChars.fire2.b, bscChars.fire2.weapon, $('#oecl1target2')[0].value, bscChars.fire2.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target3')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.fire2.c, bscChars.fire2.weapon, $('#oecl1target3')[0].value, bscChars.fire2.stamMult).send(
+        if ($('#oecl1target3')[0].value != '') cyrptoBladesGPbsc.methods.fight(bscChars.fire2.c, bscChars.fire2.weapon, $('#oecl1target3')[0].value, bscChars.fire2.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target4')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.fire2.d, bscChars.fire2.weapon, $('#oecl1target4')[0].value, bscChars.fire2.stamMult).send(
+        if ($('#oecl1target4')[0].value != '') cyrptoBladesGPbsc.methods.fight(bscChars.fire2.d, bscChars.fire2.weapon, $('#oecl1target4')[0].value, bscChars.fire2.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
       };    
 
       function fightBSCwater() {
         const weiValue = Web3.utils.toWei('5', 'gwei');
 
-        if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.water2.a, bscChars.water2.weapon, $('#oecl1target1')[0].value, bscChars.water2.stamMult).send(
+        if ($('#oecl1target1')[0].value != '') cyrptoBladesGPbsc.methods.fight(bscChars.water2.a, bscChars.water2.weapon, $('#oecl1target1')[0].value, bscChars.water2.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target2')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.water2.b, bscChars.water2.weapon, $('#oecl1target2')[0].value, bscChars.water2.stamMult).send(
+        if ($('#oecl1target2')[0].value != '') cyrptoBladesGPbsc.methods.fight(bscChars.water2.b, bscChars.water2.weapon, $('#oecl1target2')[0].value, bscChars.water2.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target3')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.water2.c, bscChars.water2.weapon, $('#oecl1target3')[0].value, bscChars.water2.stamMult).send(
+        if ($('#oecl1target3')[0].value != '') cyrptoBladesGPbsc.methods.fight(bscChars.water2.c, bscChars.water2.weapon, $('#oecl1target3')[0].value, bscChars.water2.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target4')[0].value != '') cyrptoBladesGP.methods.fight(bscChars.water2.d, bscChars.water2.weapon, $('#oecl1target4')[0].value, bscChars.water2.stamMult).send(
+        if ($('#oecl1target4')[0].value != '') cyrptoBladesGPbsc.methods.fight(bscChars.water2.d, bscChars.water2.weapon, $('#oecl1target4')[0].value, bscChars.water2.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
       };        
 
@@ -157,52 +159,52 @@
       function fightHECOlight() {
         const weiValue = Web3.utils.toWei('2.25', 'gwei');
 
-        if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.lightning.a, hecoChars.lightning.weapon, $('#oecl1target1')[0].value, hecoChars.lightning.stamMult).send(
+        if ($('#oecl1target1')[0].value != '') cyrptoBladesGPheco.methods.fight(hecoChars.lightning.a, hecoChars.lightning.weapon, $('#oecl1target1')[0].value, hecoChars.lightning.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target2')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.lightning.b, hecoChars.lightning.weapon, $('#oecl1target2')[0].value, hecoChars.lightning.stamMult).send(
+        if ($('#oecl1target2')[0].value != '') cyrptoBladesGPheco.methods.fight(hecoChars.lightning.b, hecoChars.lightning.weapon, $('#oecl1target2')[0].value, hecoChars.lightning.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target3')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.lightning.c, hecoChars.lightning.weapon, $('#oecl1target3')[0].value, hecoChars.lightning.stamMult).send(
+        if ($('#oecl1target3')[0].value != '') cyrptoBladesGPheco.methods.fight(hecoChars.lightning.c, hecoChars.lightning.weapon, $('#oecl1target3')[0].value, hecoChars.lightning.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target4')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.lightning.d, hecoChars.lightning.weapon, $('#oecl1target4')[0].value, hecoChars.lightning.stamMult).send(
+        if ($('#oecl1target4')[0].value != '') cyrptoBladesGPheco.methods.fight(hecoChars.lightning.d, hecoChars.lightning.weapon, $('#oecl1target4')[0].value, hecoChars.lightning.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
      };
 
       function fightHECOearth(){
         const weiValue = Web3.utils.toWei('2.25', 'gwei');
 
-        if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.earth.a, hecoChars.earth.weapon, $('#oecl1target1')[0].value, hecoChars.earth.stamMult).send(
+        if ($('#oecl1target1')[0].value != '') cyrptoBladesGPheco.methods.fight(hecoChars.earth.a, hecoChars.earth.weapon, $('#oecl1target1')[0].value, hecoChars.earth.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target2')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.earth.b, hecoChars.earth.weapon, $('#oecl1target2')[0].value, hecoChars.earth.stamMult).send(
+        if ($('#oecl1target2')[0].value != '') cyrptoBladesGPheco.methods.fight(hecoChars.earth.b, hecoChars.earth.weapon, $('#oecl1target2')[0].value, hecoChars.earth.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target3')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.earth.c, hecoChars.earth.weapon, $('#oecl1target3')[0].value, hecoChars.earth.stamMult).send(
+        if ($('#oecl1target3')[0].value != '') cyrptoBladesGPheco.methods.fight(hecoChars.earth.c, hecoChars.earth.weapon, $('#oecl1target3')[0].value, hecoChars.earth.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target4')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.earth.d, hecoChars.earth.weapon, $('#oecl1target4')[0].value, hecoChars.earth.stamMult).send(
+        if ($('#oecl1target4')[0].value != '') cyrptoBladesGPheco.methods.fight(hecoChars.earth.d, hecoChars.earth.weapon, $('#oecl1target4')[0].value, hecoChars.earth.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
       }
 
       function fightHECOfire() {
         const weiValue = Web3.utils.toWei('2.25', 'gwei');
 
-        if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.fire.a, hecoChars.fire.weapon, $('#oecl1target1')[0].value, hecoChars.fire.stamMult).send(
+        if ($('#oecl1target1')[0].value != '') cyrptoBladesGPheco.methods.fight(hecoChars.fire.a, hecoChars.fire.weapon, $('#oecl1target1')[0].value, hecoChars.fire.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target2')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.fire.b, hecoChars.fire.weapon, $('#oecl1target2')[0].value, hecoChars.fire.stamMult).send(
+        if ($('#oecl1target2')[0].value != '') cyrptoBladesGPheco.methods.fight(hecoChars.fire.b, hecoChars.fire.weapon, $('#oecl1target2')[0].value, hecoChars.fire.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target3')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.fire.c, hecoChars.fire.weapon, $('#oecl1target3')[0].value, hecoChars.fire.stamMult).send(
+        if ($('#oecl1target3')[0].value != '') cyrptoBladesGPheco.methods.fight(hecoChars.fire.c, hecoChars.fire.weapon, $('#oecl1target3')[0].value, hecoChars.fire.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target4')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.fire.d, hecoChars.fire.weapon, $('#oecl1target4')[0].value, hecoChars.fire.stamMult).send(
+        if ($('#oecl1target4')[0].value != '') cyrptoBladesGPheco.methods.fight(hecoChars.fire.d, hecoChars.fire.weapon, $('#oecl1target4')[0].value, hecoChars.fire.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
       };      
 
       function fightHECOwater() {
         const weiValue = Web3.utils.toWei('2.25', 'gwei');
 
-        if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.water.a, hecoChars.water.weapon, $('#oecl1target1')[0].value, hecoChars.water.stamMult).send(
+        if ($('#oecl1target1')[0].value != '') cyrptoBladesGPheco.methods.fight(hecoChars.water.a, hecoChars.water.weapon, $('#oecl1target1')[0].value, hecoChars.water.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target2')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.water.b, hecoChars.water.weapon, $('#oecl1target2')[0].value, hecoChars.water.stamMult).send(
+        if ($('#oecl1target2')[0].value != '') cyrptoBladesGPheco.methods.fight(hecoChars.water.b, hecoChars.water.weapon, $('#oecl1target2')[0].value, hecoChars.water.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target3')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.water.c, hecoChars.water.weapon, $('#oecl1target3')[0].value, hecoChars.water.stamMult).send(
+        if ($('#oecl1target3')[0].value != '') cyrptoBladesGPheco.methods.fight(hecoChars.water.c, hecoChars.water.weapon, $('#oecl1target3')[0].value, hecoChars.water.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
-        if ($('#oecl1target4')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.water.d, hecoChars.water.weapon, $('#oecl1target4')[0].value, hecoChars.water.stamMult).send(
+        if ($('#oecl1target4')[0].value != '') cyrptoBladesGPheco.methods.fight(hecoChars.water.d, hecoChars.water.weapon, $('#oecl1target4')[0].value, hecoChars.water.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
       };    
 
