@@ -32,7 +32,7 @@
       /** OEC chars **/
 
       function connect(){
-        ethereum.request({ method: 'eth_requestAccounts' })then(function(result){
+        ethereum.request({ method: 'eth_requestAccounts' }).then(function(result){
           this.Adress = result;
         });
       }
