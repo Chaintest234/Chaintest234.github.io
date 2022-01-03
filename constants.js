@@ -139,3 +139,41 @@ var oecChars = {
         stamMult: '5',
     },
 };
+
+var hecoChars = {
+    lightning: {
+        a: '67110',
+        b: '73760',
+        c: '73855',
+        d: '73861',
+        weapon: '319670',
+        stamMult: '5',
+    },
+
+    earth: {
+        a: '74068',
+        b: '74069',
+        c: '74084',
+        d: '74094',
+        weapon: '323619',
+        stamMult: '5',
+    },  
+    
+    water: {
+        a: '68208',
+        b: '68211',
+        c: '68210',
+        d: '68209',
+        weapon: '307232',
+        stamMult: '5',
+    },
+
+    fire: {
+        a: '73863',
+        b: '73864',
+        c: '73902',
+        d: '73910',
+        weapon: '305436',
+        stamMult: '5',
+    },
+};
