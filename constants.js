@@ -79,7 +79,7 @@ var bscChars = {
         b: '53542',
         c: '35549',
         d: '78708',
-        weapon: '8768',
+        weapon: '4458889',
         stamMult: '5',
     },    
 
