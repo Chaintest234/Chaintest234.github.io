@@ -155,7 +155,7 @@
       /** HECO Chars **/
 
       function fightHECOlight() {
-        const weiValue = Web3.utils.toWei('.1', 'gwei');
+        const weiValue = Web3.utils.toWei('2.25', 'gwei');
 
         if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.lightning.a, hecoChars.lightning.weapon, $('#oecl1target1')[0].value, hecoChars.lightning.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
@@ -168,7 +168,7 @@
      };
 
       function fightHECOearth(){
-        const weiValue = Web3.utils.toWei('.1', 'gwei');
+        const weiValue = Web3.utils.toWei('2.25', 'gwei');
 
         if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.earth.a, hecoChars.earth.weapon, $('#oecl1target1')[0].value, hecoChars.earth.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
@@ -181,7 +181,7 @@
       }
 
       function fightHECOfire() {
-        const weiValue = Web3.utils.toWei('.1', 'gwei');
+        const weiValue = Web3.utils.toWei('2.25', 'gwei');
 
         if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.fire.a, hecoChars.fire.weapon, $('#oecl1target1')[0].value, hecoChars.fire.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
@@ -194,7 +194,7 @@
       };      
 
       function fightHECOwater() {
-        const weiValue = Web3.utils.toWei('.1', 'gwei');
+        const weiValue = Web3.utils.toWei('2.25', 'gwei');
 
         if ($('#oecl1target1')[0].value != '') cyrptoBladesGP.methods.fight(hecoChars.water.a, hecoChars.water.weapon, $('#oecl1target1')[0].value, hecoChars.water.stamMult).send(
           { from: ethereum.selectedAddress, gasPrice: weiValue });
