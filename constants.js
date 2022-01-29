@@ -135,7 +135,7 @@ var oecChars = {
         b: '15924',
         c: '15923',
         d: '15925',
-        weapon: '15649',
+        weapon: '43509',
         stamMult: '5',
     },
 };
